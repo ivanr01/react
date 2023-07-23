@@ -1,16 +1,20 @@
 import TituloPrincipal from "./componentes/TituloPrincipal/TituloPrincipal";
-import NavBar from "./componentes/NavBar/NavBar";
-import ItemCount from "./componentes/ItemCount/ItemCount";
-import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
+import NavBar from "./componentes/NavBar/NavBar"
+import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer"
+import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailContainer"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 const App = () => {
   return (
     <>
-    <NavBar/>
-    <ItemListContainer/>
-
-    <ItemCount/>
-
+      <BrowserRouter>
+        <NavBar/>
+        <Routes>
+          <Route path="/" element={<ItemListContainer/>}/>
+          <Route path="/categoria/:idCategoria" element={<ItemListContainer/>} />
+          <Route path="/item/:idItem" element={<ItemDetailContainer/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

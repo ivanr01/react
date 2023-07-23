@@ -1,0 +1,9 @@
+.contenedorItem {
+    text-align: center;
+    border: 1px solid cornflowerblue;
+    margin: 2rem;
+}
+
+.imgDetail {
+    width: 25vw;
+}
