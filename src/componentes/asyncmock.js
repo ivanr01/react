@@ -1,8 +1,8 @@
 const misProductos = [
-    { id: "1", nombre: 'Coca Cola', precio: 1500, img: "../img/cocacola.jpg", idCat: "2" },
-    { id: "2", nombre: "Hamburguesa", precio: 180, img: "../img/hamburguesa.webp", idCat: "2" },
-    { id: "3", nombre: "Ensalada", precio: 200, img: "../img/ensalada.png", idCat: "3" },
-    { id: "4", nombre: "Sopa", precio: 900, img: "../img/sopa.png", idCat: "3" },
+    { id: "1", nombre: 'Coca Cola', precio: 1500, stock: 100, img: "../img/cocacola.jpg", idCat: "2" },
+    { id: "2", nombre: "Hamburguesa", precio: 180, stock: 100, img: "../img/hamburguesa.webp", idCat: "2" },
+    { id: "3", nombre: "Ensalada", precio: 200, stock: 100, img: "../img/ensalada.png", idCat: "3" },
+    { id: "4", nombre: "Sopa", precio: 900, stock: 100, img: "../img/sopa.png", idCat: "3" },
 ]
 
 export const getProductos = () => {

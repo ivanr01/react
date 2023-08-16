@@ -9,10 +9,23 @@
     align-items: center;
 }
 
+.cardProducto:hover {
+    box-shadow: 0 6px 12px rgba(64, 63, 98, 0.088);
+  }
+
 .imgProducto {
     width: 165px;
     object-fit: contain;
 }
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    margin: 0;
+  }
 
 .btnProducto {
     background-color:darkslategray;

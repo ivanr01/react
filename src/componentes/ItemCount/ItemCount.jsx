@@ -1,29 +1,38 @@
-// contador de productos que almacene el numero de unidades 
+import { useState } from "react";
+import './ItemCount.css'
 
-import { useState } from "react"
- 
-const ItemCount = () => {
-    const [contador, SetContador] = useState(1)
+
+
+const ItemCount = ({inicial, stock, funcionAgregar}) => {
+    const [contador, setContador] = useState(inicial);
+
 
     const incrementar = () => {
-        if (contador<10){
-        SetContador(contador+1);
+        if(contador < stock) {
+            setContador(contador + 1);
         }
     }
 
     const decrementar = () => {
-        if (contador>1){
-            SetContador(contador-1)
+        if (contador > inicial) {
+            setContador(contador - 1);
         }
     }
 
-  return (
-    <div>
-        <button onClick={decrementar}>-</button>
-        <p>{contador}</p>
-        <button onClick={incrementar}>+</button>
-    </div>
-  )
+
+    return (
+        <>
+            <div>
+                <button className="miBtn" onClick={decrementar}> - </button>
+                <p> {contador} </p>
+                <button className="miBtn" onClick={incrementar}> + </button>
+            </div>
+            <button className="miBtn" onClick={() => funcionAgregar(contador) }> Agregar al Carrito </button>
+
+        </>
+    )
 }
+
+
 
 export default ItemCount

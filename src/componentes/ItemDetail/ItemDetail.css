@@ -7,3 +7,8 @@
 .imgDetail {
     width: 25vw;
 }
+
+.imgProducto {
+    width: 165px;
+    object-fit: contain;
+}
